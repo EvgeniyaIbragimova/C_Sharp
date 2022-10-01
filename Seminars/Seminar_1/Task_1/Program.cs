@@ -3,13 +3,13 @@
 
 Console.WriteLine("Введите число ");
 int a = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine ("Введите число ");
+Console.WriteLine("Введите число ");
 int b = Convert.ToInt32(Console.ReadLine());
-if (a == b*b)
+if (a == b * b)
 {
     Console.WriteLine($"{a} является квадратом {b}");
 }
-else if (b == a*a)
+else if (b == a * a)
 {
     Console.WriteLine($"{b} является квадратом {a}");
 }
