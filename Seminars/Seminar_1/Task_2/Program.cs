@@ -32,3 +32,16 @@ if (a == 7)
     Console.WriteLine("Воскресенье");
 }
 
+Console.WriteLine("Введите число ");
+int day = Convert.ToInt32(Console.ReadLine());
+string[] days = { "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье" };
+if (day < 1 || day > 7)
+{
+    Console.WriteLine("Такого дня недели не существует");
+}
+else
+{
+    Console.WriteLine(days[day - 1]);
+}
+
+
