@@ -8,8 +8,9 @@ int b = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите число: ");
 int c = Convert.ToInt32(Console.ReadLine());
 int max = a;
-if (b > a) max = b;
-if (c > b) max = c;
+if (b > max) max = b;
+if (c > max) max = c;
+if (a > max) max = a;
 {
     Console.WriteLine($"max = {max}");
 }
