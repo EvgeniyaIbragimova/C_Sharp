@@ -7,4 +7,9 @@ Console.WriteLine("Введите число: ");
 int b = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите число: ");
 int c = Convert.ToInt32(Console.ReadLine());
-max = a
+int max = a;
+if (b > a) max = b;
+if (c > b) max = c;
+{
+    Console.WriteLine($"max = {max}");
+}
