@@ -10,7 +10,7 @@ if (number > 99 & number < 1000)
 {
     int result1 = number / 10;
     int result2 = result1 % 10;
-    System.Console.WriteLine(result2);
+    System.Console.WriteLine($"{number} -> {result2}");
 } 
 else
 {
