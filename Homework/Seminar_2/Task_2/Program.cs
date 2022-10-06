@@ -7,9 +7,9 @@
 int number = new Random().Next(100, 1000);            
 int Compound(int number)                    
 {
-    int c = number % 10;                                     
-    int a = number / 100 % 10;                   
-    int result = a * 10 + c;               
+    int a = number % 10;                                     
+    int b = number / 100 % 10;                   
+    int result = b * 10 + a;               
     return result;                                   
 }
 System.Console.WriteLine($"{number} -> {Compound(number)}");
