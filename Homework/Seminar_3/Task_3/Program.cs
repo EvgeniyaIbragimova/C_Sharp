@@ -2,42 +2,15 @@
 // 3 -> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
 
-int Prompt(string message)
+int Prompt(string msg)
 {
-    System.Console.Write(message);
-    string readValue = Console.ReadLine();
-    int result = int.Parse(readValue);
-    return result;
+    System.Console.WriteLine(msg);
+    int number = Convert.ToInt32(Console.ReadLine());
+    return number;
 }
 
-void ReturnDegre(int number)
+int N = Prompt("Введите число: ");
+for (int i = 1; i <= N; i++)
 {
-    int index = 1;
-    while (index <= number)
-    {
-        System.Console.Write($"{Math.Pow(index, 3)}\t");
-        index++;
-    }
+    System.Console.WriteLine(Math.Pow(i, 3));
 }
-
-int value = Prompt("Введите число N -> ");
-if (value <= 0)
-{
-    System.Console.WriteLine("Некорректный ввод");
-}
-else
-{
-    Console.Write($"{value} -> ");
-    ReturnDegre(value);
-}
-Console.WriteLine();
-
-
-
-
-
-
-
-
-
-
