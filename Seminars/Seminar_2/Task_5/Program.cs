@@ -3,12 +3,12 @@
 // 1213-> 3 
 // 845 -> 8
 
-int Prompt(string msg)                                 // тело функции, объявление функции
-{
-    System.Console.WriteLine(msg);                     // ввод
-    int number = Convert.ToInt32(Console.ReadLine());  // присвоение
-    return number;                                     // возврат к целому, выход их функции!
-}
+// int Prompt(string msg)                                 // тело функции, объявление функции
+// {
+//     System.Console.WriteLine(msg);                     // ввод
+//     int number = Convert.ToInt32(Console.ReadLine());  // присвоение
+//     return number;                                     // возврат к целому, выход их функции!
+// }
 
 int a = new Random().Next(10, 10000);
 System.Console.WriteLine(a);
