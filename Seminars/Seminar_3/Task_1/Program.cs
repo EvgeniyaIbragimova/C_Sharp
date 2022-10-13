@@ -8,16 +8,16 @@ int number = Convert.ToInt32(Console.ReadLine());
 return number;
 }
 
-bool ValdateCoords(int xCoord, int yCoord)
-{
-    if (xCoord == 0 || yCoord == 0)
-    {
-        System.Console.WriteLine("Точка назодится как минимум на одной из осей");
-        return false;
-    }
+// bool ValdateCoords(int x, int y)
+// {
+//     if (x == 0 || y == 0)
+//     {
+//         System.Console.WriteLine("Точка находится как минимум на одной из осей");
+//         return false;
+//     }
 
-    return true;
-}
+//     return true;
+// }
 
 int x = Prompt("Введите X > ");
 int y = Prompt("Введите Y > ");
@@ -38,3 +38,7 @@ if (x < 0 && y < 00)
 {
     System.Console.WriteLine("3 четверть");
 }
+if (x == 0 || y == 0)
+    {
+        System.Console.WriteLine("Точка находится как минимум на одной из осей");
+    }
