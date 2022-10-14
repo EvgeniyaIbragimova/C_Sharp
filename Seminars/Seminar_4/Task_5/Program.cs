@@ -27,7 +27,32 @@ System.Console.WriteLine(secondMax);
 System.Console.WriteLine(max);
 
 
-
+// int SearchSecondMax(int[] array)
+// {
+//     int max = array[0];
+//     int secondMax = array[0];
+ 
+//     for (int i = 2; i < array.Length; i++)
+//     {
+//         if (array[i] > max)
+//         {
+//             secondMax = max;
+//             max = array[i];
+//         }
+//         if (secondMax == max)
+//         {
+//             if (i < array.Length-1)
+//             {
+//                 secondMax = array[i+1];
+//             }
+//         }
+//         if (array[i] > secondMax & array[i] != max)
+//         {
+//             secondMax = array[i];
+//         }
+//     }
+//     return secondMax;
+// }
 
 
 
