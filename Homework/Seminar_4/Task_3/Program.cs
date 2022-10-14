@@ -12,7 +12,7 @@ int Prompt(string msg)
 
 int start = Prompt("Введите начало диапазона массива: ");
 int end = Prompt("Введите конец диапазона массива: ");
-int[] array = new int[7];
+int[] array = new int[8];
 
 void FillArray(int[] collection)
 {
