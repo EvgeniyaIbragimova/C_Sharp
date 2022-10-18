@@ -2,13 +2,13 @@
 // Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 // [3, 7.4, 22.3, 2, 78] -> 76
 
-double[] CreateArray(int len)
+double[] CreateArray(int len, int limitMin, int limitMax)
 {
     double[] array = new double[len];
     Random rnd = new Random();
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = rnd.NextDouble();
+        array[i] = rnd.Next(limitMin,limitMax) + rnd.NextDouble();
     }
     return array;
 }
@@ -48,7 +48,7 @@ double FindMin(double[] array)
     return min;
 }
 
-double[] myArray = CreateArray(5);
+double[] myArray = CreateArray(5, -10, 10);
 PrintArray(myArray);
 double dif = FindMax(myArray) - FindMin(myArray);
 
