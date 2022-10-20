@@ -31,7 +31,7 @@ int CountPositive(int[] array)
     return count;
 }
 
-Console.Write("Введите числа: ");
+Console.Write("Введите числа -> ");
 int[] myArray = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
 PrintArray(myArray);
 Console.WriteLine($"{CountPositive(myArray)}");
