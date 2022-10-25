@@ -41,17 +41,17 @@ int Prompt(string msg)
     return number;
 }
 
-void FindPosition(int[,] matrix, int value1, int value2)
+void FindPositionNumber(int[,] array, int position1, int position2)
 {
-    int j = value1;
-    int i = value2;
-    if (i >= matrix.GetLength(0) || i < 0 || j >= matrix.GetLength(1) || j < 0)
+    int j = position1;
+    int i = position2;
+    if (i >= array.GetLength(0) || i < 0 || j >= array.GetLength(1) || j < 0)
     {
-        Console.WriteLine($"{value1} , {value2} -> такого числа в массиве нет");
+        Console.WriteLine($"{position1} , {position2} -> такого числа в массиве нет");
     }
     else
     {
-        Console.WriteLine($"{value1}, {value2} -> {matrix[i, j]}");
+        Console.WriteLine($"{position1}, {position2} -> {array[i, j]}");
     }
 }
 
@@ -59,4 +59,4 @@ int[,] array = CreateArray(3, 3);
 PrintArray(array);
 int number1 = Prompt("Введите номер строки: ");
 int number2 = Prompt("Введите номер столбца: ");
-FindPosition(array, number1, number2);
+FindPositionNumber(array, number1, number2);
