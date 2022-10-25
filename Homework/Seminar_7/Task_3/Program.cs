@@ -50,6 +50,6 @@ void FindAverage(int[,] array)
 
 int[,] array = CreateArray(3, 4);
 PrintArray(array);
-Console.WriteLine("Среднее арифметическое по столбцам: ");
+Console.WriteLine("Среднее арифметическое каждого столбца: ");
 FindAverage(array);
 Console.WriteLine();
