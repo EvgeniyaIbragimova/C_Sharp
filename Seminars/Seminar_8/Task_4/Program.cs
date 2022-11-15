@@ -7,11 +7,11 @@
 // 8 4 2 4
 // 5 2 6 7
 // Наименьший элемент - 1, на выходе получим следующий массив:
-// 9 4 2
-// 2 2 6
-// 3 4 7
+// 9 2 3
+// 4 2 4
+// 2 6 7
 
-int[,] CreateArray(int lenRow, int lenColumns)
+int[,] CreateMatrix(int lenRow, int lenColumns)
 {
     int[,] array = new int[lenRow, lenColumns];
     Random random = new Random();
@@ -25,7 +25,7 @@ int[,] CreateArray(int lenRow, int lenColumns)
     return array;
 }
 
-void PrintArray(int[,] array)
+void PrintMatrix(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -81,5 +81,11 @@ int[,] ChangeMatrix(int[,] matrix)
             a++;
         }
     }
-    return matrix;
+    return ans;
 }
+
+int[,] matrix = CreateMatrix(4, 4);
+PrintMatrix(matrix);
+FindMin(matrix);
+System.Console.WriteLine();
+PrintMatrix(ChangeMatrix(matrix));

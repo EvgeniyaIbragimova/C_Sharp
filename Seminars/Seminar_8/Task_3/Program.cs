@@ -3,10 +3,6 @@
 // Частотный словарь содержит информацию о том, сколько раз встречается элемент входных данных. 
 // Значения элементов массива 0..9
 
-// Задача 1: 
-// Задайте двумерный массив. 
-// Напишите программу, которая поменяет местами первую и последнюю строку массива.
-
 int[,] CreateArray(int lenRow, int lenColumns)
 {
     int[,] array = new int[lenRow, lenColumns];
@@ -21,7 +17,7 @@ int[,] CreateArray(int lenRow, int lenColumns)
     return array;
 }
 
-void PrintArray(int[,] array)
+void PrintMatrix(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -33,18 +29,35 @@ void PrintArray(int[,] array)
     }
 }
 
-int[] FrequeDict(int[,] matrix)
+void PrintArray(int[] array)
 {
-    int[] dict = new int [10];
-    foreach (var item in matrix)
+    for (int i = 0; i < array.Length; i++)
     {
-        dict[item]++;
-    } 
+        System.Console.Write($"{array[i]}\t");
+    }
+    System.Console.WriteLine();
+}
+
+int[] Dictionary(int[,] matrix)
+{
+    int[] dict = new int[10];
+    for (int i = 0; i < dict.Length; i++)
+    {
+        int count = 0;
+        foreach (var item in matrix)
+        {
+            if (item == i)
+            {
+                count++;
+            }
+            dict[i] = count;
+        }
+    }
     return dict;
 }
 
-int[,] array = CreateArray(3, 4);
-PrintArray(array);
+int[,] matrix = CreateArray(3, 3);
+PrintMatrix(matrix);
 System.Console.WriteLine();
-int[] dict = FrequeDict(array);
-
+int[] dict = Dictionary(matrix);
+PrintArray(dict);
